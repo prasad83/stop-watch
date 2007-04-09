@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MVDData version="1.3">
+    <DesignDocument designVersion="MIDP-2" uidCounter="33">
+        <DesignComponent id="$MobileDevice" typeid="MIDP:$MobileDevice" uid="0"/>
+        <DesignComponent id="$StartPoint" typeid="MIDP:$StartPoint" uid="1">
+            <Property name="targetDisplayable" value="stopWatchFrm"/>
+            <Property name="targetForwardDisplayable"/>
+        </DesignComponent>
+        <DesignComponent id="exitCommand" typeid="MIDP:javax.microedition.lcdui.Command" uid="5">
+            <Property name="label" value="STRING:Exit"/>
+            <Property name="priority" value="4"/>
+            <Property name="type" value="EXIT"/>
+        </DesignComponent>
+        <DesignComponent id="$CommandAction" typeid="MIDP:CommandAction" uid="3">
+            <Property name="targetDisplayable" value="$MobileDevice"/>
+            <Property name="targetForwardDisplayable"/>
+            <Property name="actionSource" value="exitCommand"/>
+            <Property name="actionOrigin" value="stopWatchFrm"/>
+        </DesignComponent>
+        <DesignComponent id="mcolons" typeid="MIDP:javax.microedition.lcdui.StringItem" uid="14">
+            <Property name="label" value="STRING:"/>
+            <Property name="text" value="STRING::"/>
+            <Property name="font" value="boldFont"/>
+            <ContainerProperty name="commands"/>
+        </DesignComponent>
+        <DesignComponent id="minItem" typeid="MIDP:javax.microedition.lcdui.StringItem" uid="10">
+            <Property name="label" value="STRING:"/>
+            <Property name="text" value="STRING:00"/>
+            <Property name="font" value="boldFont"/>
+            <ContainerProperty name="commands"/>
+        </DesignComponent>
+        <DesignComponent id="hourItem" typeid="MIDP:javax.microedition.lcdui.StringItem" uid="9">
+            <Property name="label" value="STRING:"/>
+            <Property name="text" value="STRING:00"/>
+            <Property name="font" value="boldFont"/>
+            <ContainerProperty name="commands"/>
+        </DesignComponent>
+        <DesignComponent id="secItem" typeid="MIDP:javax.microedition.lcdui.StringItem" uid="11">
+            <Property name="label" value="STRING:"/>
+            <Property name="text" value="STRING:00"/>
+            <Property name="font" value="boldFont"/>
+            <ContainerProperty name="commands"/>
+        </DesignComponent>
+        <DesignComponent id="stopWatchFrm" typeid="MIDP:javax.microedition.lcdui.Form" uid="2">
+            <Property name="title" value="STRING:StopWatch"/>
+            <ContainerProperty name="commands">
+                <ContainerPropertyItem value="$CommandAction1"/>
+                <ContainerPropertyItem value="$CommandAction2"/>
+                <ContainerPropertyItem value="$CommandAction3"/>
+                <ContainerPropertyItem value="$CommandAction"/>
+            </ContainerProperty>
+            <ContainerProperty name="items">
+                <ContainerPropertyItem value="topSpacer"/>
+                <ContainerPropertyItem value="hourItem"/>
+                <ContainerPropertyItem value="hcolonm"/>
+                <ContainerPropertyItem value="minItem"/>
+                <ContainerPropertyItem value="mcolons"/>
+                <ContainerPropertyItem value="secItem"/>
+                <ContainerPropertyItem value="scolonms"/>
+                <ContainerPropertyItem value="msItem"/>
+            </ContainerProperty>
+        </DesignComponent>
+        <DesignComponent id="hcolonm" typeid="MIDP:javax.microedition.lcdui.StringItem" uid="12">
+            <Property name="label" value="STRING:"/>
+            <Property name="text" value="STRING::"/>
+            <Property name="font" value="boldFont"/>
+            <ContainerProperty name="commands"/>
+        </DesignComponent>
+        <DesignComponent id="boldFont" typeid="MIDP:javax.microedition.lcdui.Font" uid="16">
+            <Property name="face" value="FACE_SYSTEM"/>
+            <Property name="style" value="1"/>
+            <Property name="size" value="SIZE_MEDIUM"/>
+        </DesignComponent>
+        <DesignComponent id="topSpacer" typeid="MIDP-2:javax.microedition.lcdui.Spacer" uid="17">
+            <Property name="minWidth" value="1000"/>
+            <Property name="minHeight" value="1"/>
+            <Property name="layout" value="16435"/>
+        </DesignComponent>
+        <DesignComponent id="scolonms" typeid="MIDP:javax.microedition.lcdui.StringItem" uid="18">
+            <Property name="label" value="STRING:"/>
+            <Property name="text" value="STRING::"/>
+            <Property name="font" value="boldFont"/>
+            <ContainerProperty name="commands"/>
+        </DesignComponent>
+        <DesignComponent id="msItem" typeid="MIDP:javax.microedition.lcdui.StringItem" uid="19">
+            <Property name="label" value="STRING:"/>
+            <Property name="text" value="STRING:00"/>
+            <Property name="font" value="boldFont"/>
+            <ContainerProperty name="commands"/>
+        </DesignComponent>
+        <DesignComponent id="startCommand" typeid="MIDP:javax.microedition.lcdui.Command" uid="20">
+            <Property name="label" value="STRING:Start"/>
+            <Property name="priority" value="1"/>
+            <Property name="type" value="OK"/>
+        </DesignComponent>
+        <DesignComponent id="stopCommand" typeid="MIDP:javax.microedition.lcdui.Command" uid="23">
+            <Property name="label" value="STRING:Stop"/>
+            <Property name="priority" value="2"/>
+            <Property name="type" value="STOP"/>
+        </DesignComponent>
+        <DesignComponent id="$CommandAction2" typeid="MIDP:CommandAction" uid="24">
+            <Property name="targetDisplayable"/>
+            <Property name="targetForwardDisplayable"/>
+            <Property name="actionSource" value="stopCommand"/>
+            <Property name="actionOrigin" value="stopWatchFrm"/>
+        </DesignComponent>
+        <DesignComponent id="resetCommand" typeid="MIDP:javax.microedition.lcdui.Command" uid="26">
+            <Property name="label" value="STRING:Reset"/>
+            <Property name="priority" value="3"/>
+            <Property name="type" value="CANCEL"/>
+        </DesignComponent>
+        <DesignComponent id="$CommandAction3" typeid="MIDP:CommandAction" uid="27">
+            <Property name="targetDisplayable"/>
+            <Property name="targetForwardDisplayable"/>
+            <Property name="actionSource" value="resetCommand"/>
+            <Property name="actionOrigin" value="stopWatchFrm"/>
+        </DesignComponent>
+        <DesignComponent id="$CommandAction1" typeid="MIDP:CommandAction" uid="21">
+            <Property name="targetDisplayable"/>
+            <Property name="targetForwardDisplayable"/>
+            <Property name="actionSource" value="startCommand"/>
+            <Property name="actionOrigin" value="stopWatchFrm"/>
+        </DesignComponent>
+    </DesignDocument>
+    <FlowDocument version="1.1">
+        <Node id="$MobileDevice" location="160,192" order=",$StartPoint,,,,,,,,,$ExitPoint,,,,,"/>
+        <Node id="stopWatchFrm" location="400,192" order="$CommandAction,$CommandAction3,$CommandAction2,$CommandAction1,$CommandAction4,,,,,,$Default,,,,,"/>
+        <Link id="$StartPoint$ActionLink" path="200,168,360,168"/>
+        <Link id="$CommandAction$ActionLink" path="440,184,493,184,493,229,47,229,47,168,120,168"/>
+    </FlowDocument>
+</MVDData>
